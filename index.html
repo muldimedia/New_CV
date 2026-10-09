@@ -1,369 +1,733 @@
 <!DOCTYPE html>
 
+
+
 <html lang="en">
+
 <head>
+
 <meta charset="utf-8"/>
+
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+
 <title>Franko Hysenllari — Private Suite</title>
+
 <meta content="Hospitality, Guest Transport &amp; Pool Safety Professional | 5‑Star Resort Experience in Greece &amp; Cyprus" name="description"/>
+
 <link href="styles.css" rel="stylesheet"/>
+
 <link href="assets/main/Logo.PNG" rel="icon"/><meta content="#0A0D14" name="theme-color"/></head>
+
 <body>
+
 <div aria-label="Appearance and sound" class="experience-controls">
+
 <button aria-pressed="false" id="themeToggle" type="button">Light theme</button>
+
 <button aria-pressed="false" id="soundToggle" type="button">Sound on</button>
+
 <button aria-pressed="true" id="musicToggle" type="button">Music on</button>
+
 </div>
+
 <!-- =========================================================
-       MAIN KEYCARD / DOOR SCREEN
-  ========================================================== -->
+
+       MAIN KEYCARD / DOOR SCREEN
+
+  ========================================================== -->
+
 <main class="keycard-screen" id="keycardScreen">
+
 <div class="ambient ambient-one"></div>
+
 <div class="ambient ambient-two"></div>
+
 <div class="keycard-stage" id="keycardStage">
+
 <!-- HOTEL DOOR -->
+
 <section class="hotel-door" id="hotelDoor">
+
 <div class="door-frame">
+
 <div class="door-leaf door-leaf-left">
+
 <div class="door-panel door-panel-left"></div>
+
 <div class="door-handle handle-left"><span></span></div>
+
 </div>
+
 <div class="door-leaf door-leaf-right">
+
 <div class="door-panel door-panel-right"></div>
+
 <div class="door-handle handle-right"><span></span></div>
+
 <!-- READER + PIN -->
+
 <section aria-label="Room access" class="reader-zone">
+
 <div class="reader-panel">
+
 <div class="reader-top">
+
 <div class="reader-ring" id="readerRing">
+
 <svg aria-hidden="true" class="reader-progress" viewbox="0 0 60 60"><circle cx="30" cy="30" r="27"></circle></svg>
+
 <div class="reader-nfc">
-                  ))))
-                </div>
+
+                  ))))
+
+                </div>
+
 </div>
+
 <div class="reader-label">
+
 <strong>PRIVATE ACCESS</strong>
+
 <small aria-live="polite" id="readerStatus">NFC / PIN · IDLE</small>
+
 </div>
+
 </div>
+
 <!-- PIN DISPLAY -->
+
 <div aria-live="polite" class="pin-display" id="pinDisplay">
+
 <span>•</span>
+
 <span>•</span>
+
 <span>•</span>
+
 <span>•</span>
+
 </div>
+
 <!-- KEYPAD -->
+
 <div class="pin-keypad">
+
 <button class="pin-key" data-pin="1">1</button>
+
 <button class="pin-key" data-pin="2">2</button>
+
 <button class="pin-key" data-pin="3">3</button>
+
 <button class="pin-key" data-pin="4">4</button>
+
 <button class="pin-key" data-pin="5">5</button>
+
 <button class="pin-key" data-pin="6">6</button>
+
 <button class="pin-key" data-pin="7">7</button>
+
 <button class="pin-key" data-pin="8">8</button>
+
 <button class="pin-key" data-pin="9">9</button>
+
 <button aria-label="Clear PIN" class="pin-key pin-action" id="pinClear">
-                C
-              </button>
+
+                C
+
+              </button>
+
 <button class="pin-key" data-pin="0">
-                0
-              </button>
+
+                0
+
+              </button>
+
 <button aria-label="Delete last PIN digit" class="pin-key pin-action" id="pinBackspace">
-                ←
-              </button>
+
+                ←
+
+              </button>
+
 </div>
+
 <div class="reader-hint">
-              Enter 4-digit access code
-            </div>
+
+              Enter 4-digit access code
+
+            </div>
+
 </div>
+
 </section>
+
 </div>
+
 <div class="door-title">FRANKO HYSENLLARI<span>PRIVATE SUITE</span></div>
+
 </div>
+
 <!-- CARD -->
+
 <div class="keycard-wrap" id="keycardWrap">
+
 <article aria-describedby="accessInstruction" aria-label="Move key card to the reader. Hold for 2.5 seconds or activate twice to unlock." class="keycard" id="keycard" tabindex="0">
+
 <div aria-hidden="true" class="card-glow"></div>
+
 <button aria-label="Open Franko's profile" class="portrait" id="profileHit">
+
 <img alt="Franko Hysenllari" onerror="this.style.display='none'" src="assets/main/profile.png"/>
+
 <span aria-hidden="true" class="portrait-fallback">FH</span>
+
 </button>
+
 <h1 class="keycard-name">Franko Hysenllari</h1>
+
 <p class="keycard-role">Hospitality Professional</p>
+
 <p class="keycard-welcome">Welcome to my suite.</p>
+
 <div aria-hidden="true" class="card-auth-progress"><span></span></div>
+
 </article>
+
 </div>
+
 </section>
+
 <div class="entrance-guide">
+
 <p id="accessInstruction">Hold over the reader for 2.5s · or tap twice.</p>
+
 <p aria-live="polite" class="visually-hidden" id="accessStatus" role="status">Your private suite awaits.</p>
+
 <button class="text-button" id="quickAccess" type="button">Enter CV <span aria-hidden="true">↗</span></button>
+
 </div>
+
 </div>
+
 </main>
+
 <!-- =========================================================
-       SUITE DASHBOARD
-  ========================================================== -->
+
+       SUITE DASHBOARD
+
+  ========================================================== -->
+
 <main class="suite-dashboard" id="suiteDashboard">
+
 <header class="suite-header">
+
 <div class="suite-brand">
+
 <span class="mini-crest">FH</span>
+
 <div>
+
 <strong>FRANKO HYSENLLARI</strong>
+
 <small>PRIVATE SUITE · HOSPITALITY PORTFOLIO</small>
+
 </div>
+
 </div>
+
 <button class="suite-exit" id="suiteExit">
-        ← Lock Door
-      </button>
+
+        ← Lock Door
+
+      </button>
+
 </header>
+
 <div class="suite-intro">
+
 <p class="eyebrow">
-        ACCESS GRANTED
-      </p>
+
+        ACCESS GRANTED
+
+      </p>
+
 <h1>
-        Welcome to Franko's
-        <span>Private Suite.</span>
+
+        Welcome to Franko's
+
+        <span>Private Suite.</span>
+
 </h1>
+
 <p>
-        Explore the rooms below to discover Franko's hospitality experience,
-        credentials, guest reviews and contact information.
-      </p>
+
+        Explore the rooms below to discover Franko's hospitality experience,
+
+        credentials, guest reviews and contact information.
+
+      </p>
+
 </div>
+
 <!-- =====================================================
-         ROOM NAVIGATION
-    ====================================================== -->
+
+         ROOM NAVIGATION
+
+    ====================================================== -->
+
 <nav class="room-navigation">
+
 <button class="room-tab active" data-room="101">
+
 <span>1010</span>
-        Master Profile
-      </button>
+
+        Master Profile
+
+      </button>
+
 <button class="room-tab" data-room="102">
+
 <span>1020</span>
-        Guest Service Log
-      </button>
+
+        Guest Service Log
+
+      </button>
+
 <button class="room-tab" data-room="103">
+
 <span>1030</span>
-        Credentials
-      </button>
+
+        Credentials
+
+      </button>
+
 <button class="room-tab" data-room="104">
+
 <span>1040</span>
-        Reviews
-      </button>
+
+        Reviews
+
+      </button>
+
 <button class="room-tab" data-room="105">
+
 <span>1050</span>
-        Contact
-      </button>
+
+        Contact
+
+      </button>
+
 <button class="room-tab" data-room="106"><span>1060</span>Beyond Work</button></nav>
+
 <!-- =====================================================
-         ROOM 1010
-    ====================================================== -->
+
+         ROOM 1010
+
+    ====================================================== -->
+
 <section class="suite-room active" data-room-content="101">
+
 <div class="room-number">
-        ROOM 1010
-      </div>
+
+        ROOM 1010
+
+      </div>
+
 <div class="profile-room">
+
 <div class="profile-large">
+
 <div class="large-portrait">
+
 <img alt="Franko Hysenllari" onerror="this.style.display='none'" src="assets/main/profile.png"/>
+
 <span>FH</span>
+
 </div>
+
 <div>
+
 <p class="eyebrow">
-              MASTER PROFILE
-            </p>
+
+              MASTER PROFILE
+
+            </p>
+
 <h2>
-              Franko Hysenllari
-            </h2>
+
+              Franko Hysenllari
+
+            </h2>
+
 <p class="profile-title">Hospitality, Guest Transport &amp; Pool Safety Professional | 5‑Star
-          Resort Experience in Greece &amp; Cyprus</p>
+
+          Resort Experience in Greece &amp; Cyprus</p>
+
 </div>
+
 </div>
+
 <div class="executive-summary"><h3 id="headAbout">About Me</h3><p id="aboutBody">
-        Greetings, I’m Franko (Panagiotis) Hysenllari, originally from Albania
-        and having spent most of my life in Greece. For nearly five years, I had
-        the opportunity to work in Cyprus, where I gained valuable experience in
-        the hospitality industry and developed a deep appreciation for
-        delivering outstanding guest experiences.<br/><br/>I’m known for my
-        ability to manage multiple priorities with a positive,
-        solutions‑oriented mindset. As a dependable and collaborative
-        professional, I take pride in providing exceptional service, fostering
-        teamwork, and ensuring every guest interaction exceeds expectations.<br/><br/>While
-        my main focus is in hospitality, I also have a genuine passion for
-        programming and computer science. Exploring technology has become one of
-        my favorite hobbies, and I’m excited about the possibility of one day
-        combining my hospitality expertise with my growing interest in
-        development and innovation.
-      </p></div>
+
+        Greetings, I’m Franko (Panagiotis) Hysenllari, originally from Albania
+
+        and having spent most of my life in Greece. For nearly five years, I had
+
+        the opportunity to work in Cyprus, where I gained valuable experience in
+
+        the hospitality industry and developed a deep appreciation for
+
+        delivering outstanding guest experiences.<br/><br/>I’m known for my
+
+        ability to manage multiple priorities with a positive,
+
+        solutions‑oriented mindset. As a dependable and collaborative
+
+        professional, I take pride in providing exceptional service, fostering
+
+        teamwork, and ensuring every guest interaction exceeds expectations.<br/><br/>While
+
+        my main focus is in hospitality, I also have a genuine passion for
+
+        programming and computer science. Exploring technology has become one of
+
+        my favorite hobbies, and I’m excited about the possibility of one day
+
+        combining my hospitality expertise with my growing interest in
+
+        development and innovation.
+
+      </p></div>
+
 <div class="contact-bar">
+
 <a href="tel:+306988575289">
+
 <small>Mobile</small>
-            +30 6988575289
-          </a>
+
+            +30 6988575289
+
+          </a>
+
 <a href="mailto:blizgoyt@gmail.com">
+
 <small>Email</small>
-            blizgoyt@gmail.com
-          </a>
+
+            blizgoyt@gmail.com
+
+          </a>
+
 <a href="https://linkedin.com/in/frankohysenllari" rel="noopener" target="_blank">
+
 <small>LinkedIn</small>
-            /frankohysenllari
-          </a>
+
+            /frankohysenllari
+
+          </a>
+
 <a href="https://frankocv.netlify.app" rel="noopener" target="_blank">
+
 <small>Personal Site</small>
-            frankocv.netlify.app
-          </a>
+
+            frankocv.netlify.app
+
+          </a>
+
 <div>
+
 <small>Location</small>
-            Rhodes · Southern Aegean · Greece
-          </div>
+
+            Rhodes · Southern Aegean · Greece
+
+          </div>
+
 </div>
+
 </div>
+
 </section>
+
 <!-- =====================================================
-         ROOM 1020
-    ====================================================== -->
+
+         ROOM 1020
+
+    ====================================================== -->
+
 <section class="suite-room" data-room-content="102">
+
 <div class="room-number">
-        ROOM 1020
-      </div>
+
+        ROOM 1020
+
+      </div>
+
 <div class="timeline-room">
+
 <div class="timeline-intro">
+
 <p class="eyebrow">
-            GUEST SERVICE LOG
-          </p>
+
+            GUEST SERVICE LOG
+
+          </p>
+
 <h2 id="headExperience">
-            Professional Experience
-          </h2>
+
+            Professional Experience
+
+          </h2>
+
 </div>
+
 <div class="timeline"><article class="timeline-item">
+
 <div class="timeline-date">
-              Apr 2026<br/>
-              Present
-            </div>
+
+              Apr 2026<br/>
+
+              Present
+
+            </div>
+
 <div class="timeline-marker"></div>
+
 <div class="timeline-content">
+
 <h3>
-                Wine Hotel
-              </h3>
+
+                Wine Hotel
+
+              </h3>
+
 <strong>
-                Night Shift Receptionist
-              </strong>
+
+                Night Shift Receptionist
+
+              </strong>
+
 <p>
-                Front office operations, guest assistance,
-                night audit responsibilities and overnight
-                guest experience management.
-              </p>
+
+                Front office operations, guest assistance,
+
+                night audit responsibilities and overnight
+
+                guest experience management.
+
+              </p>
+
 </div>
+
 </article><article class="timeline-item"><div class="timeline-date">May 2025 — October
-            2025</div><div class="timeline-marker"></div><div class="timeline-content"><h3>Atrium Palace Thalasso Spa Resort &amp; Villas – Rhodes, Greece</h3><strong>Groom / Bell Boy (Seasonal)</strong><ul class="bullets">
+
+            2025</div><div class="timeline-marker"></div><div class="timeline-content"><h3>Atrium Palace Thalasso Spa Resort &amp; Villas – Rhodes, Greece</h3><strong>Groom / Bell Boy (Seasonal)</strong><ul class="bullets">
+
 <li id="exp1_1">
-              Assisted guests with luggage and transfers to rooms and villas.
-            </li>
+
+              Assisted guests with luggage and transfers to rooms and villas.
+
+            </li>
+
 <li id="exp1_2">
-              Supported reception and concierge teams for elevated guest
-              service.
-            </li>
+
+              Supported reception and concierge teams for elevated guest
+
+              service.
+
+            </li>
+
 <li id="exp1_3">
-              Maintained lobby and public areas cleanliness and readiness.
-            </li>
+
+              Maintained lobby and public areas cleanliness and readiness.
+
+            </li>
+
 <li id="exp1_4">
-              Provided transportation support for guests with mobility needs.
-            </li>
+
+              Provided transportation support for guests with mobility needs.
+
+            </li>
+
 <li id="exp1_5">
-              Offered guidance on resort amenities and activities.
-            </li>
+
+              Offered guidance on resort amenities and activities.
+
+            </li>
+
 </ul></div></article><article class="timeline-item"><div class="timeline-date">May 2024 — February
-            2025</div><div class="timeline-marker"></div><div class="timeline-content"><h3>Hellenic Army – Greece</h3><strong>Cook &amp; Special Forces Trainee</strong><ul class="bullets">
+
+            2025</div><div class="timeline-marker"></div><div class="timeline-content"><h3>Hellenic Army – Greece</h3><strong>Cook &amp; Special Forces Trainee</strong><ul class="bullets">
+
 <li id="exp2_1">
-              Prepared and served meals for ~1,000 troops daily.
-            </li>
+
+              Prepared and served meals for ~1,000 troops daily.
+
+            </li>
+
 <li id="exp2_2">
-              Maintained hygiene and quality standards in bulk production.
-            </li>
+
+              Maintained hygiene and quality standards in bulk production.
+
+            </li>
+
 <li id="exp2_3">
-              Coordinated kitchen operations during field exercises.
-            </li>
+
+              Coordinated kitchen operations during field exercises.
+
+            </li>
+
 <li id="exp2_4">
-              Adapted to changing schedules and limited resources.
-            </li>
+
+              Adapted to changing schedules and limited resources.
+
+            </li>
+
 <li id="exp2_5">
-              Contributed to troop morale with reliable nutritious meals.
-            </li>
+
+              Contributed to troop morale with reliable nutritious meals.
+
+            </li>
+
 </ul></div></article><article class="timeline-item"><div class="timeline-date">2019 — 2023</div><div class="timeline-marker"></div><div class="timeline-content"><h3>Sunrise Beach Hotel – Protaras, Cyprus</h3><strong>Pool Attendant / Lifeguard (Seasonal)</strong><ul class="bullets">
+
 <li id="exp3_1">
-              Supervised pool and beach areas ensuring guest safety.
-            </li>
+
+              Supervised pool and beach areas ensuring guest safety.
+
+            </li>
+
 <li id="exp3_2">
-              Assisted guests with seating, towels, and service needs.
-            </li>
+
+              Assisted guests with seating, towels, and service needs.
+
+            </li>
+
 <li id="exp3_3">
-              Enforced safety rules and performed rescues when required.
-            </li>
+
+              Enforced safety rules and performed rescues when required.
+
+            </li>
+
 <li id="exp3_4">
-              Maintained cleanliness and readiness of pool/beach spaces.
-            </li>
+
+              Maintained cleanliness and readiness of pool/beach spaces.
+
+            </li>
+
 <li id="exp3_5">
-              Delivered friendly and professional guest communication.
-            </li>
+
+              Delivered friendly and professional guest communication.
+
+            </li>
+
 </ul><p class="refnote">Reference Letter available upon request</p><div class="metric-row">
+
 <span>
-                  CSAT
-                  <strong>82 → 96%</strong>
+
+                  CSAT
+
+                  <strong>82 → 96%</strong>
+
 </span>
+
 <span>
+
 <strong>1,000+</strong>
-                  Sunbeds
-                </span>
+
+                  Sunbeds
+
+                </span>
+
 <span>
+
 <strong>300+</strong>
-                  Umbrellas
-                </span>
+
+                  Umbrellas
+
+                </span>
+
 <span>
+
 <strong>0</strong>
-                  Peak Days Off
-                </span>
+
+                  Peak Days Off
+
+                </span>
+
 </div></div></article><article class="timeline-item"><div class="timeline-date">2020 — 2022</div><div class="timeline-marker"></div><div class="timeline-content"><h3>Panels 3Gyian – Central Macedonia, Greece</h3><strong>Electrician Assistant</strong><ul class="bullets">
+
 <li id="exp4_1">
-              Assisted with solar farm installation and setup.
-            </li>
+
+              Assisted with solar farm installation and setup.
+
+            </li>
+
 <li id="exp4_2">Organized panels, racks, and tools.</li>
+
 <li id="exp4_3">
-              Supported wiring, inverter placement, and testing.
-            </li>
+
+              Supported wiring, inverter placement, and testing.
+
+            </li>
+
 <li id="exp4_4">Maintained safety and worksite organization.</li>
+
 <li id="exp4_5">Followed construction safety protocols.</li>
+
 </ul></div></article><article class="timeline-item"><div class="timeline-date">2019</div><div class="timeline-marker"></div><div class="timeline-content"><h3>Ladokolla – Protaras, Cyprus</h3><strong>Waiter (Part-Time)</strong><ul class="bullets">
+
 <li id="exp5_1">
-              Served guests professionally and maintained table service flow.
-            </li>
+
+              Served guests professionally and maintained table service flow.
+
+            </li>
+
 <li id="exp5_2">
-              Handled orders and ensured customer satisfaction.
-            </li>
+
+              Handled orders and ensured customer satisfaction.
+
+            </li>
+
 <li id="exp5_3">Assisted team during peak service hours.</li>
+
 </ul></div></article><article class="timeline-item"><div class="timeline-date">2017</div><div class="timeline-marker"></div><div class="timeline-content"><h3>Pizza Latino – Mavrothalassa, Greece</h3><strong>Delivery / Waiter</strong><ul class="bullets">
+
 <li id="exp6_1">
-              Delivered orders efficiently with friendly service.
-            </li>
+
+              Delivered orders efficiently with friendly service.
+
+            </li>
+
 <li id="exp6_2">Handled in-house orders during busy hours.</li>
+
 <li id="exp6_3">Maintained order accuracy and hygiene.</li>
+
 </ul></div></article><article class="timeline-item"><div class="timeline-date">2016</div><div class="timeline-marker"></div><div class="timeline-content"><h3>Carrefour Franchise – Mavrothalassa, Greece</h3><strong>Cashier</strong><ul class="bullets">
+
 <li id="exp7_1">Handled customer transactions accurately.</li>
+
 <li id="exp7_2">Assisted customers and maintained service flow.</li>
+
 <li id="exp7_3">
-              Ensured smooth checkout and proper documentation.
-            </li>
+
+              Ensured smooth checkout and proper documentation.
+
+            </li>
+
 </ul></div></article></div>
+
 </div>
+
 </section>
+
 <!-- =====================================================
-         ROOM 103
-    ====================================================== -->
+
+         ROOM 103
+
+    ====================================================== -->
+
 <section class="suite-room" data-room-content="103"><div class="room-number">ROOM 1030</div><h2 id="headSkills">Skills</h2><div class="credentials-grid" id="fullSkills"><div class="credential-card">
 <h3 class="h3">
-            🤝 <span id="skills_hosp_title">Hospitality &amp; Guest Service</span>
+
+            🤝 <span id="skills_hosp_title">Hospitality &amp; Guest Service</span>
 </h3>
 <div class="chips">
 <span class="pill" id="skill_hosp_1">Guest Experience</span>
@@ -374,7 +738,8 @@
 </div>
 </div><div class="credential-card">
 <h3 class="h3">
-            🛟 <span id="skills_safety_title">Safety &amp; Lifeguarding</span>
+
+            🛟 <span id="skills_safety_title">Safety &amp; Lifeguarding</span>
 </h3>
 <div class="chips">
 <span class="pill" id="skill_safe_1">Emergency Response</span>
@@ -384,8 +749,10 @@
 </div>
 </div><div class="credential-card">
 <h3 class="h3">
-            🪖
-            <span id="skills_military_title">Military Discipline &amp; Leadership</span>
+
+            🪖
+
+            <span id="skills_military_title">Military Discipline &amp; Leadership</span>
 </h3>
 <div class="chips">
 <span class="pill" id="skill_mil_1">Discipline</span>
@@ -395,7 +762,8 @@
 </div>
 </div><div class="credential-card">
 <h3 class="h3">
-            💻 <span id="skills_tech_title">Technical &amp; Digital Skills</span>
+
+            💻 <span id="skills_tech_title">Technical &amp; Digital Skills</span>
 </h3>
 <div class="chips">
 <span class="pill" id="skill_tech_1">HTML</span>
@@ -427,359 +795,644 @@
 </div>
 </div></div><h2 class="content-heading" id="edu_head">Education &amp; Certifications</h2><div class="credentials-grid" id="fullEducation"><div class="credential-card">
 <h3 class="h3">
-            🎓 <span id="edu_cs_title">Computer Science</span>
+
+            🎓 <span id="edu_cs_title">Computer Science</span>
 </h3>
 <ul class="edu-list">
 <li id="edu_cs_1">
-              JavaScript Asteroids Game Development, MindLuster —
-              <em>Feb 2024</em>
+
+              JavaScript Asteroids Game Development, MindLuster —
+
+              <em>Feb 2024</em>
 </li>
 <li id="edu_cs_2">
-              Intro to Web Dev (HTML5, CSS3, JS), edX —
-              <em>Nov 2023 – Jan 2024</em>
+
+              Intro to Web Dev (HTML5, CSS3, JS), edX —
+
+              <em>Nov 2023 – Jan 2024</em>
 </li>
 <li id="edu_cs_3">
-              HTML, CSS, JavaScript, Coursera — <em>Nov 2023 – Dec 2023</em>
+
+              HTML, CSS, JavaScript, Coursera — <em>Nov 2023 – Dec 2023</em>
 </li>
 </ul>
 </div><div class="credential-card">
 <h3 class="h3">🗣️ <span id="edu_lang_title">Languages</span></h3>
 <ul class="edu-list">
 <li id="edu_lang_1">
-              ECPE English C2 (Michigan) — <em>May 2015 – Dec 2016</em>
+
+              Basic Spanish, edX — <em>Aug 2023 – Dec 2023</em>
 </li>
 <li id="edu_lang_2">
-              Pearson English B2 — <em>Sep 2009 – May 2015</em>
+
+              German A1, MindLuster — <em>May 2023 – Aug 2023</em>
 </li>
 <li id="edu_lang_3">
-              Basic Spanish, edX — <em>Aug 2023 – Dec 2023</em>
+
+              ECPE English C2 (Michigan) — <em>May 2015 – Dec 2016</em>
 </li>
 <li id="edu_lang_4">
-              German A1, MindLuster — <em>May 2023 – Aug 2023</em>
+
+              Pearson English B2 — <em>Sep 2009 – May 2015</em>
 </li>
 </ul>
 </div><div class="credential-card">
 <h3 class="h3">
-            🛠️ <span id="edu_dev_title">Development</span>
+
+            🛠️ <span id="edu_dev_title">Development</span>
 </h3>
 <ul class="edu-list">
-                          <li id="edu_psych_2">
-              Hotel Management: Distribution, Revenue &amp; Demand, ESSEC Business School —
-              <em>July 2026 - August 2026</em>
-            </li>
+<li id="edu_dev_1">
 
-<li id="edu_dev_3">
-              Lifeguard Certification, Ναυαγοσωστική Σχολή Μακεδονίας - Lifeguard.gr — <em>Apr 2025</em>
+              Hotel Management: Distribution, Revenue &amp; Demand, ESSEC Business School —
+
+              <em>July 2026 - August 2026</em>
+
+            </li>
+<li id="edu_dev_2">
+
+              Lifeguard Certification, Ναυαγοσωστική Σχολή Μακεδονίας - Lifeguard.gr — <em>Apr 2025</em>
 </li>
-<li id="edu_dev_7">
-              Bronze Pool Lifeguard, Life Saving Cyprus —
-              <em>Mar 2022 – May 2022</em>
+<li id="edu_dev_3">
+
+              Cook, Military (Special Forces) — <em>May 2024 – Feb 2025</em>
 </li>
 <li id="edu_dev_4">
-              Cook, Military (Special Forces) — <em>May 2024 – Feb 2025</em>
-</li>
-              <li id="edu_psych_1">
-              Leadership and Teams, Saylor University —
-              <em>October 2024</em>
-</li>
 
+              Leadership and Teams, Saylor University —
 
+              <em>October 2024</em>
+</li>
+<li id="edu_dev_5">
+
+              Bronze Pool Lifeguard, Life Saving Cyprus —
+
+              <em>Mar 2022 – May 2022</em>
+</li>
 </ul>
 </div><div class="credential-card">
 <h3 class="h3">
-            🌱 <span id="edu_growth_title">Continuous Growth</span>
+
+            🌱 <span id="edu_growth_title">Continuous Growth</span>
 </h3>
 <ul class="edu-list">
 <li id="edu_growth_1">
 <strong>LinkedIn Learning</strong>: Programming Foundations,
-              Emotional Intelligence
-            </li>
+
+              Emotional Intelligence
+
+            </li>
 <li id="edu_growth_2">
 <strong>SkillUp</strong>: Intro to Data Analytics, Business
-              Analysis Basics
-            </li>
+
+              Analysis Basics
+
+            </li>
 <li id="edu_growth_3">
 <strong>MindLuster</strong>: Communication Skills, Body Language,
-              Emotional Intelligence
-            </li>
+
+              Emotional Intelligence
+
+            </li>
 <li id="edu_growth_4">
 <strong>Typsy</strong>: Guest experience, Front desk, Teamwork,
-              Social media for hospitality
-            </li>
+
+              Social media for hospitality
+
+            </li>
 </ul>
 </div></div><div class="credential-card additional-training">
-  <h3>Psychological Training</h3>
-  <ul>
+
+ 🧠 <h3>Psychological Training</h3>
+
+  <ul>
+<li id="edu_psych_1">
+
+              Psychological First Aid, The Johns Hopkins University —
+
+              <em>August 2026</em> 
+
+            </li>
+<li id="edu_psych_2">
+
+              Abnormal Psychology, Wesleyan University, Specialization Certificate — 
+
+              <em>December 2025 – January 2026</em>
+
+            </li>
+<li id="edu_psych_3">
+
+              Introduction to Abnormal Psychology, Coursera — <em>Dec 2025</em>
+</li>
+<li id="edu_psych_4">
+
+              Introduction to Psychology, Coursera — <em>May 2025</em>
+</li>
+<li id="edu_psych_5">Schizophrenia, Coursera — <em>May 2025</em></li>
+<li id="edu_psych_6">
+
+              Social Psychology, Coursera — <em>Jan 2023 – Mar 2023</em>
+</li>
+</ul></div>
 
 
-              <li id="edu_psych_3">
-              Psychological First Aid, The Johns Hopkins University —
-              <em>August 2026</em> 
-            </li>
-              
-              <li id="edu_psych_5">
-              Abnormal Psychology, Wesleyan University, Specialization Certificate — 
-              <em>December 2025 – January 2026</em>
-            </li>
-            <li id="edu_dev_6">
-              Social Psychology, Coursera — <em>Jan 2023 – Mar 2023</em>
-</li>
-            <li id="edu_dev_8">
-              Introduction to Abnormal Psychology, Coursera — <em>Dec 2025</em>
-</li>
-<li id="edu_dev_1">
-              Introduction to Psychology, Coursera — <em>May 2025</em>
-</li>
-<li id="edu_dev_2">Schizophrenia, Coursera — <em>May 2025</em></li>
-            </ul></div>
-            
-  <h3 class="content-heading">Certificates</h3>
-              <p class="certificate-request">Certificates and supporting documents are available upon request.</p></section>
+
+  <h3 class="content-heading">Certificates</h3>
+
+              <p class="certificate-request">Certificates and supporting documents are available upon request.</p></section>
+
 <!-- =====================================================
-         ROOM 104
-    ====================================================== -->
+
+         ROOM 104
+
+    ====================================================== -->
+
 <section class="suite-room" data-room-content="104">
+
 <div class="room-number">
-        ROOM 1040
-      </div>
+
+        ROOM 1040
+
+      </div>
+
 <div class="reviews-room">
+
 <div class="reviews-heading">
+
 <div>
+
 <p class="eyebrow">
-              GUEST SERVICE LOG
-            </p>
+
+              GUEST SERVICE LOG
+
+            </p>
+
 <h2>
-              Unsolicited Guest Reviews
-            </h2>
+
+              Unsolicited Guest Reviews
+
+            </h2>
+
 </div>
+
 <div class="review-score">46<small>Guest Reviews</small></div>
+
 </div><p class="section-sub" id="guestExperienceBody">
-          As a Lifeguard–Pool Attendant, I focused on delivering an exceptional
-          guest experience by prioritizing safety, offering a warm welcome, and
-          managing real-time sunbed reservations. Though we didn’t handle
-          payments, the role demanded strong organization, clear communication,
-          and attentive guest service. I consistently helped guests secure their
-          preferred spots, eased concerns during busy mornings, and ensured
-          fresh towels were available daily. Now as a Groom/Bell Boy, I continue
-          to uphold high standards of customer satisfaction by providing
-          courteous, efficient service and ensuring every guest feels well cared
-          for from arrival to departure.
-        </p>
+
+          As a Lifeguard–Pool Attendant, I focused on delivering an exceptional
+
+          guest experience by prioritizing safety, offering a warm welcome, and
+
+          managing real-time sunbed reservations. Though we didn’t handle
+
+          payments, the role demanded strong organization, clear communication,
+
+          and attentive guest service. I consistently helped guests secure their
+
+          preferred spots, eased concerns during busy mornings, and ensured
+
+          fresh towels were available daily. Now as a Groom/Bell Boy, I continue
+
+          to uphold high standards of customer satisfaction by providing
+
+          courteous, efficient service and ensuring every guest feels well cared
+
+          for from arrival to departure.
+
+        </p>
+
 <!-- CAROUSEL WINDOW -->
+
 <div class="review-window">
+
 <button aria-label="Previous review" class="review-arrow review-prev" id="reviewPrev">
-            ←
-          </button>
+
+            ←
+
+          </button>
+
 <div class="review-track" id="reviewTrack"><div class="review-card" data-category="atrium"><img alt="Atrium Palace · guest review 1" aria-label="Enlarge Atrium Palace guest review 1" loading="lazy" role="button" src="assets/reviews/Atrium_1.webp" tabindex="0"/></div><div class="review-card" data-category="atrium"><img alt="Atrium Palace · guest review 2" aria-label="Enlarge Atrium Palace guest review 2" loading="lazy" role="button" src="assets/reviews/Atrium_2.webp" tabindex="0"/></div><div class="review-card" data-category="atrium"><img alt="Atrium Palace · guest review 3" aria-label="Enlarge Atrium Palace guest review 3" loading="lazy" role="button" src="assets/reviews/Atrium_3.webp" tabindex="0"/></div><div class="review-card" data-category="atrium"><img alt="Atrium Palace · guest review 4" aria-label="Enlarge Atrium Palace guest review 4" loading="lazy" role="button" src="assets/reviews/Atrium_4.webp" tabindex="0"/></div><div class="review-card" data-category="atrium"><img alt="Atrium Palace · guest review 5" aria-label="Enlarge Atrium Palace guest review 5" loading="lazy" role="button" src="assets/reviews/Atrium_5.webp" tabindex="0"/></div><div class="review-card" data-category="atrium"><img alt="Atrium Palace · guest review 6" aria-label="Enlarge Atrium Palace guest review 6" loading="lazy" role="button" src="assets/reviews/Atrium_6.webp" tabindex="0"/></div><div class="review-card" data-category="atrium"><img alt="Atrium Palace · guest review 7" aria-label="Enlarge Atrium Palace guest review 7" loading="lazy" role="button" src="assets/reviews/Atrium_7.webp" tabindex="0"/></div><div class="review-card" data-category="atrium"><img alt="Atrium Palace · guest review 8" aria-label="Enlarge Atrium Palace guest review 8" loading="lazy" role="button" src="assets/reviews/Atrium_8.webp" tabindex="0"/></div><div class="review-card" data-category="atrium"><img alt="Atrium Palace · guest review 9" aria-label="Enlarge Atrium Palace guest review 9" loading="lazy" role="button" src="assets/reviews/Atrium_9.webp" tabindex="0"/></div><div class="review-card" data-category="atrium"><img alt="Atrium Palace · guest review 10" aria-label="Enlarge Atrium Palace guest review 10" loading="lazy" role="button" src="assets/reviews/Atrium_10.webp" tabindex="0"/></div><div class="review-card" data-category="atrium"><img alt="Atrium Palace · guest review 11" aria-label="Enlarge Atrium Palace guest review 11" loading="lazy" role="button" src="assets/reviews/Atrium_11.webp" tabindex="0"/></div><div class="review-card" data-category="atrium"><img alt="Atrium Palace · guest review 12" aria-label="Enlarge Atrium Palace guest review 12" loading="lazy" role="button" src="assets/reviews/Atrium_12.webp" tabindex="0"/></div><div class="review-card" data-category="atrium"><img alt="Atrium Palace · guest review 13" aria-label="Enlarge Atrium Palace guest review 13" loading="lazy" role="button" src="assets/reviews/Atrium_13.webp" tabindex="0"/></div><div class="review-card" data-category="atrium"><img alt="Atrium Palace · guest review 14" aria-label="Enlarge Atrium Palace guest review 14" loading="lazy" role="button" src="assets/reviews/Atrium_14.webp" tabindex="0"/></div><div class="review-card" data-category="atrium"><img alt="Atrium Palace · guest review 15" aria-label="Enlarge Atrium Palace guest review 15" loading="lazy" role="button" src="assets/reviews/Atrium_15.webp" tabindex="0"/></div><div class="review-card" data-category="atrium"><img alt="Atrium Palace · guest review 16" aria-label="Enlarge Atrium Palace guest review 16" loading="lazy" role="button" src="assets/reviews/Atrium_16.webp" tabindex="0"/></div><div class="review-card" data-category="atrium"><img alt="Atrium Palace · guest review 17" aria-label="Enlarge Atrium Palace guest review 17" loading="lazy" role="button" src="assets/reviews/Atrium_17.webp" tabindex="0"/></div><div class="review-card" data-category="beach"><img alt="Sunrise Beach · guest review 1" aria-label="Enlarge Sunrise Beach guest review 1" loading="lazy" role="button" src="assets/reviews/Beach_1.webp" tabindex="0"/></div><div class="review-card" data-category="beach"><img alt="Sunrise Beach · guest review 2" aria-label="Enlarge Sunrise Beach guest review 2" loading="lazy" role="button" src="assets/reviews/Beach_2.webp" tabindex="0"/></div><div class="review-card" data-category="beach"><img alt="Sunrise Beach · guest review 3" aria-label="Enlarge Sunrise Beach guest review 3" loading="lazy" role="button" src="assets/reviews/Beach_3.webp" tabindex="0"/></div><div class="review-card" data-category="beach"><img alt="Sunrise Beach · guest review 4" aria-label="Enlarge Sunrise Beach guest review 4" loading="lazy" role="button" src="assets/reviews/Beach_4.webp" tabindex="0"/></div><div class="review-card" data-category="beach"><img alt="Sunrise Beach · guest review 5" aria-label="Enlarge Sunrise Beach guest review 5" loading="lazy" role="button" src="assets/reviews/Beach_5.webp" tabindex="0"/></div><div class="review-card" data-category="beach"><img alt="Sunrise Beach · guest review 6" aria-label="Enlarge Sunrise Beach guest review 6" loading="lazy" role="button" src="assets/reviews/Beach_6.webp" tabindex="0"/></div><div class="review-card" data-category="beach"><img alt="Sunrise Beach · guest review 7" aria-label="Enlarge Sunrise Beach guest review 7" loading="lazy" role="button" src="assets/reviews/Beach_7.webp" tabindex="0"/></div><div class="review-card" data-category="beach"><img alt="Sunrise Beach · guest review 8" aria-label="Enlarge Sunrise Beach guest review 8" loading="lazy" role="button" src="assets/reviews/Beach_8.webp" tabindex="0"/></div><div class="review-card" data-category="beach"><img alt="Sunrise Beach · guest review 9" aria-label="Enlarge Sunrise Beach guest review 9" loading="lazy" role="button" src="assets/reviews/Beach_9.webp" tabindex="0"/></div><div class="review-card" data-category="beach"><img alt="Sunrise Beach · guest review 10" aria-label="Enlarge Sunrise Beach guest review 10" loading="lazy" role="button" src="assets/reviews/Beach_10.webp" tabindex="0"/></div><div class="review-card" data-category="beach"><img alt="Sunrise Beach · guest review 11" aria-label="Enlarge Sunrise Beach guest review 11" loading="lazy" role="button" src="assets/reviews/Beach_11.webp" tabindex="0"/></div><div class="review-card" data-category="beach"><img alt="Sunrise Beach · guest review 12" aria-label="Enlarge Sunrise Beach guest review 12" loading="lazy" role="button" src="assets/reviews/Beach_12.webp" tabindex="0"/></div><div class="review-card" data-category="beach"><img alt="Sunrise Beach · guest review 13" aria-label="Enlarge Sunrise Beach guest review 13" loading="lazy" role="button" src="assets/reviews/Beach_13.webp" tabindex="0"/></div><div class="review-card" data-category="beach"><img alt="Sunrise Beach · guest review 14" aria-label="Enlarge Sunrise Beach guest review 14" loading="lazy" role="button" src="assets/reviews/Beach_14.webp" tabindex="0"/></div><div class="review-card" data-category="beach"><img alt="Sunrise Beach · guest review 15" aria-label="Enlarge Sunrise Beach guest review 15" loading="lazy" role="button" src="assets/reviews/Beach_15.webp" tabindex="0"/></div><div class="review-card" data-category="beach"><img alt="Sunrise Beach · guest review 16" aria-label="Enlarge Sunrise Beach guest review 16" loading="lazy" role="button" src="assets/reviews/Beach_16.webp" tabindex="0"/></div><div class="review-card" data-category="beach"><img alt="Sunrise Beach · guest review 17" aria-label="Enlarge Sunrise Beach guest review 17" loading="lazy" role="button" src="assets/reviews/Beach_17.webp" tabindex="0"/></div><div class="review-card" data-category="beach"><img alt="Sunrise Beach · guest review 18" aria-label="Enlarge Sunrise Beach guest review 18" loading="lazy" role="button" src="assets/reviews/Beach_18.webp" tabindex="0"/></div><div class="review-card" data-category="beach"><img alt="Sunrise Beach · guest review 19" aria-label="Enlarge Sunrise Beach guest review 19" loading="lazy" role="button" src="assets/reviews/Beach_19.webp" tabindex="0"/></div><div class="review-card" data-category="beach"><img alt="Sunrise Beach · guest review 20" aria-label="Enlarge Sunrise Beach guest review 20" loading="lazy" role="button" src="assets/reviews/Beach_20.webp" tabindex="0"/></div><div class="review-card" data-category="beach"><img alt="Sunrise Beach · guest review 21" aria-label="Enlarge Sunrise Beach guest review 21" loading="lazy" role="button" src="assets/reviews/Beach_21.webp" tabindex="0"/></div><div class="review-card" data-category="beach"><img alt="Sunrise Beach · guest review 22" aria-label="Enlarge Sunrise Beach guest review 22" loading="lazy" role="button" src="assets/reviews/Beach_22.webp" tabindex="0"/></div><div class="review-card" data-category="beach"><img alt="Sunrise Beach · guest review 23" aria-label="Enlarge Sunrise Beach guest review 23" loading="lazy" role="button" src="assets/reviews/Beach_23.webp" tabindex="0"/></div><div class="review-card" data-category="beach"><img alt="Sunrise Beach · guest review 24" aria-label="Enlarge Sunrise Beach guest review 24" loading="lazy" role="button" src="assets/reviews/Beach_24.webp" tabindex="0"/></div><div class="review-card" data-category="beach"><img alt="Sunrise Beach · guest review 25" aria-label="Enlarge Sunrise Beach guest review 25" loading="lazy" role="button" src="assets/reviews/Beach_25.webp" tabindex="0"/></div><div class="review-card" data-category="beach"><img alt="Sunrise Beach · guest review 26" aria-label="Enlarge Sunrise Beach guest review 26" loading="lazy" role="button" src="assets/reviews/Beach_26.webp" tabindex="0"/></div><div class="review-card" data-category="beach"><img alt="Sunrise Beach · guest review 27" aria-label="Enlarge Sunrise Beach guest review 27" loading="lazy" role="button" src="assets/reviews/Beach_27.webp" tabindex="0"/></div><div class="review-card" data-category="beach"><img alt="Sunrise Beach · guest review 28" aria-label="Enlarge Sunrise Beach guest review 28" loading="lazy" role="button" src="assets/reviews/Beach_28.webp" tabindex="0"/></div><div class="review-card" data-category="beach"><img alt="Sunrise Beach · guest review 29" aria-label="Enlarge Sunrise Beach guest review 29" loading="lazy" role="button" src="assets/reviews/Beach_29.webp" tabindex="0"/></div></div>
+
 <button aria-label="Next review" class="review-arrow review-next" id="reviewNext">
-            →
-          </button>
+
+            →
+
+          </button>
+
 </div>
+
 <div class="review-counter" id="reviewCounter">Review 1 / 46</div>
+
 </div>
+
 </section>
+
 <!-- =====================================================
-         ROOM 105
-    ====================================================== -->
+
+         ROOM 105
+
+    ====================================================== -->
+
 <section class="suite-room" data-room-content="105">
+
 <div class="room-number">
-        ROOM 1050
-      </div>
+
+        ROOM 1050
+
+      </div>
+
 <div class="contact-room">
+
 <div class="contact-copy">
+
 <p class="eyebrow">
-            RESERVATIONS &amp; INQUIRIES
-          </p>
+
+            RESERVATIONS &amp; INQUIRIES
+
+          </p>
+
 <h2>
-            Let's Talk Hospitality.
-          </h2>
+
+            Let's Talk Hospitality.
+
+          </h2>
+
 <p>
-            Interested in working together, discussing an opportunity
-            or learning more about Franko's experience?
-          </p>
+
+            Interested in working together, discussing an opportunity
+
+            or learning more about Franko's experience?
+
+          </p>
+
 <button class="download-cv" id="downloadCV">Print / Save Text CV</button>
+
 <p class="email-note">Inquiries are sent to <a href="mailto:blizgoyt@gmail.com">blizgoyt@gmail.com</a> via FormSubmit.</p></div>
+
 <form action="https://formsubmit.co/blizgoyt@gmail.com" class="contact-form" id="contactForm" method="POST">
+
 <label>
-            Name
-            <input name="name" required="" type="text"/>
+
+            Name
+
+            <input name="name" required="" type="text"/>
+
 </label>
+
 <label>
-            Hotel / Company
-            <input name="company" type="text"/>
+
+            Hotel / Company
+
+            <input name="company" type="text"/>
+
 </label>
+
 <label>
-            Email
-            <input name="email" required="" type="email"/>
+
+            Email
+
+            <input name="email" required="" type="email"/>
+
 </label>
+
 <label>
-            Message
-            <textarea name="message" required="" rows="5"></textarea>
+
+            Message
+
+            <textarea name="message" required="" rows="5"></textarea>
+
 </label>
+
 <button class="send-message" type="submit">Send Inquiry</button>
+
 <p class="form-status" id="formStatus" role="status"></p>
+
 <input name="_subject" type="hidden" value="New hospitality inquiry — Franko Private Suite"/><input name="_template" type="hidden" value="table"/></form>
+
 </div>
+
 </section>
+
 <section class="suite-room" data-room-content="106"><div class="room-number">ROOM 1060</div><div class="portfolio-content" id="personalContent"><section class="content-section" id="projects">
+
 <h2 id="headProjects">Highlights &amp; Projects</h2>
+
 <div class="credential-card">
+
 <div>
+
 <h3 class="h3">🚗 RC Car Arduino — Serres</h3>
+
 <p id="proj1_body">
-            For this project, I attempted to remotely control an RC car using
-            WiFi or Bluetooth through an Arduino Uno R3. While the wireless
-            method presented compatibility and wiring challenges, I successfully
-            operated the car via Ethernet. I programmed the car to move forward
-            and backward, and integrated ultrasonic sensors to detect obstacles
-            and stop the car when an object was within 20 cm. (There is also a
-            short presentation in Greek about this build.)
-          </p>
+
+            For this project, I attempted to remotely control an RC car using
+
+            WiFi or Bluetooth through an Arduino Uno R3. While the wireless
+
+            method presented compatibility and wiring challenges, I successfully
+
+            operated the car via Ethernet. I programmed the car to move forward
+
+            and backward, and integrated ultrasonic sensors to detect obstacles
+
+            and stop the car when an object was within 20 cm. (There is also a
+
+            short presentation in Greek about this build.)
+
+          </p>
+
 </div>
+
 <div>
+
 <h3 class="h3">💻 Personal Portfolio Website</h3>
+
 <p id="proj2_body">
-            I engaged in guided projects on Coursera to build my web development
-            foundation. Having recently acquired knowledge in HTML, CSS, and
-            JavaScript, I applied these skills by building this portfolio
-            website from scratch. This project helped reinforce core concepts
-            while improving layout structure, responsive design, and user
-            interface decisions.
-          </p>
+
+            I engaged in guided projects on Coursera to build my web development
+
+            foundation. Having recently acquired knowledge in HTML, CSS, and
+
+            JavaScript, I applied these skills by building this portfolio
+
+            website from scratch. This project helped reinforce core concepts
+
+            while improving layout structure, responsive design, and user
+
+            interface decisions.
+
+          </p>
+
 </div>
+
 </div>
+
 </section><section class="content-section" id="beyond">
+
 <h2 id="headBeyond">Beyond Work</h2>
+
 <p class="beyond-intro" id="beyond_intro">
-        Outside of work, I have a few passions that keep me inspired, grounded,
-        and constantly learning. Whether it’s discovering new places, staying
-        active, or exploring new skills, I believe that what we do beyond our
-        professional life deeply shapes who we are and how we approach every
-        challenge.
-        <br/><br/>
+
+        Outside of work, I have a few passions that keep me inspired, grounded,
+
+        and constantly learning. Whether it’s discovering new places, staying
+
+        active, or exploring new skills, I believe that what we do beyond our
+
+        professional life deeply shapes who we are and how we approach every
+
+        challenge.
+
+        <br/><br/>
+
 <em>“A jack of all trades is a master of none, but oftentimes better than
-          a master of one.”</em>
+
+          a master of one.”</em>
+
 <br/><br/>
-        I’ve always enjoyed learning new things and taking on different
-        challenges from hospitality and teamwork to technology and personal
-        development. This curiosity driven mindset helps me adapt quickly, think
-        creatively, and grow in every environment I find myself in.
-      </p>
+
+        I’ve always enjoyed learning new things and taking on different
+
+        challenges from hospitality and teamwork to technology and personal
+
+        development. This curiosity driven mindset helps me adapt quickly, think
+
+        creatively, and grow in every environment I find myself in.
+
+      </p>
+
 <div class="stack">
+
 <div class="credential-card hobby-card">
+
 <div>
+
 <h3 class="h3">
-              ✈️ <span id="beyond1_head">Exploring New Horizons</span>
+
+              ✈️ <span id="beyond1_head">Exploring New Horizons</span>
+
 </h3>
+
 <p id="beyond1_body">
-              Having lived in Greece, Albania, and Cyprus, I’ve developed a
-              genuine appreciation for different cultures, traditions, and ways
-              of life. Traveling allows me to step outside my comfort zone, meet
-              new people, and see the world from fresh perspectives. Each place
-              I visit teaches me something new about communication, empathy, and
-              connection values I carry into my professional and personal life.
-            </p>
+
+              Having lived in Greece, Albania, and Cyprus, I’ve developed a
+
+              genuine appreciation for different cultures, traditions, and ways
+
+              of life. Traveling allows me to step outside my comfort zone, meet
+
+              new people, and see the world from fresh perspectives. Each place
+
+              I visit teaches me something new about communication, empathy, and
+
+              connection values I carry into my professional and personal life.
+
+            </p>
+
 </div>
+
 <img alt="Travel photo" class="zigimg" loading="lazy" src="assets/main/travel.webp"/>
+
 </div>
+
 <div class="credential-card hobby-card">
+
 <img alt="Fitness photo" class="zigimg" loading="lazy" src="assets/main/fitness.webp"/>
+
 <div>
+
 <h3 class="h3">🏋️ <span id="beyond2_head">Staying Active</span></h3>
+
 <p id="beyond2_body">
-              Physical activity has always been an essential part of my life. My
-              experience in the Greek Special Forces strengthened my discipline,
-              resilience, and teamwork qualities I bring into everything I do.
-              Staying active keeps me balanced, focused, and motivated.
-            </p>
+
+              Physical activity has always been an essential part of my life. My
+
+              experience in the Greek Special Forces strengthened my discipline,
+
+              resilience, and teamwork qualities I bring into everything I do.
+
+              Staying active keeps me balanced, focused, and motivated.
+
+            </p>
+
 </div>
+
 </div>
+
 <div class="credential-card hobby-card">
+
 <div>
+
 <h3 class="h3">
-              🧰 <span id="beyond3_head">Woodworking &amp; Hobbies</span>
+
+              🧰 <span id="beyond3_head">Woodworking &amp; Hobbies</span>
+
 </h3>
+
 <p id="beyond3_body">
-              I love building and creating both physically and intellectually.
-              From woodworking and DIY projects to learning leadership,
-              psychology, and technology, I'm driven by curiosity and hands-on
-              problem solving. Creativity, patience, and precision define my
-              personal growth journey.
-            </p>
+
+              I love building and creating both physically and intellectually.
+
+              From woodworking and DIY projects to learning leadership,
+
+              psychology, and technology, I'm driven by curiosity and hands-on
+
+              problem solving. Creativity, patience, and precision define my
+
+              personal growth journey.
+
+            </p>
+
 </div>
+
 <img alt="Woodworking photo" class="zigimg" loading="lazy" src="assets/main/hobbies.webp"/>
+
 </div>
+
 </div>
+
 </section></div></section><footer class="suite-footer">Do Not Sell or Share My Personal Information · © 2026 Franko Hysenllari — All rights reserved.</footer></main>
+
 <!-- =========================================================
-       PROFILE MODAL
-  ========================================================== -->
+
+       PROFILE MODAL
+
+  ========================================================== -->
+
 <div aria-hidden="true" aria-label="Franko Hysenllari profile" aria-modal="true" class="profile-modal" id="profileModal" role="dialog">
+
 <div class="profile-modal-card">
+
 <button aria-label="Close profile" class="modal-close" id="profileClose">
-        ×
-      </button>
+
+        ×
+
+      </button>
+
 <button aria-label="Close profile portrait" class="modal-photo" id="profilePhoto" type="button">
+
 <img alt="Franko Hysenllari" onerror="this.style.display='none'" src="assets/main/profile.png"/>
+
 <span>FH</span>
+
 </button>
+
 <p class="eyebrow">
-        PRIVATE PROFILE
-      </p>
+
+        PRIVATE PROFILE
+
+      </p>
+
 <h2>
-        Franko Hysenllari
-      </h2>
+
+        Franko Hysenllari
+
+      </h2>
+
 <p>
-        Hospitality Professional · Guest Experience · Leadership
-      </p>
+
+        Hospitality Professional · Guest Experience · Leadership
+
+      </p>
+
 <div class="modal-location">
-        Rhodes · Southern Aegean · Greece
-      </div>
+
+        Rhodes · Southern Aegean · Greece
+
+      </div>
+
 </div>
+
 </div>
+
 <!-- =========================================================
-       HIDDEN EASTER EGG PAGE
-  ========================================================== -->
+
+       HIDDEN EASTER EGG PAGE
+
+  ========================================================== -->
+
 <div aria-hidden="true" aria-labelledby="quietTitle" aria-modal="true" class="easter-egg-page" id="easterEggPage" role="dialog">
+
 <div class="easter-card">
+
 <button aria-label="Close the Quiet Room" class="icon-btn close" id="easterClose">
-        ×
-      </button>
+
+        ×
+
+      </button>
+
 <p class="easter-kicker">PRIVATE ACCESS · A MOMENT BETWEEN ROOMS</p>
+
 <h2 id="quietTitle">The Quiet Room.</h2>
+
 <p class="quiet-lead">There is a quieter side to great hospitality.</p>
+
 <p>A thoughtful detail. A calm response. The feeling of being remembered.
-        This room is a small pause to appreciate the care behind every welcome.</p>
+
+        This room is a small pause to appreciate the care behind every welcome.</p>
+
 <div class="quiet-principles">
+
 <div><span>01</span><h3>Notice the details.</h3><p>Small gestures can shape an entire stay.</p></div>
+
 <div><span>02</span><h3>Stay composed.</h3><p>Bring a little calm to a busy moment.</p></div>
+
 <div><span>03</span><h3>Make people feel remembered.</h3><p>A warm welcome lasts beyond the visit.</p></div>
+
 </div>
+
 <div class="quiet-actions">
+
 <button aria-pressed="false" id="quietAmbience" type="button">Play quiet ambience</button>
+
 <button id="quietReturn" type="button">Return to the suite <span aria-hidden="true">→</span></button>
+
 </div>
+
 <p class="quiet-signature">FRANKO HYSENLLARI · PRIVATE SUITE</p>
+
 </div>
+
 </div>
+
 <!-- =========================================================
-       REVIEW LIGHTBOX
-  ========================================================== -->
+
+       REVIEW LIGHTBOX
+
+  ========================================================== -->
+
 <div aria-hidden="true" class="review-lightbox" id="reviewLightbox">
+
 <button class="lightbox-close" id="lightboxClose">
-      ×
-    </button>
+
+      ×
+
+    </button>
+
 <button class="lightbox-arrow lightbox-prev" id="lightboxPrev">
-      ←
-    </button>
+
+      ←
+
+    </button>
+
 <img alt="Guest review" id="lightboxImage"/>
+
 <button class="lightbox-arrow lightbox-next" id="lightboxNext">
-      →
-    </button>
+
+      →
+
+    </button>
+
 </div>
+
 <script src="script.js"></script>
+
 <article aria-label="Text-only curriculum vitae" id="printCV">
+
 <section class="cv-page"><header><h1>Franko Hysenllari</h1><p class="cv-role">Hospitality &amp; Guest Service Professional</p><p>Rhodes, Southern Aegean, Greece | +30 6988575289 | blizgoyt@gmail.com</p><p>linkedin.com/in/frankohysenllari | frankocv.netlify.app</p></header>
+
 <h2>Professional Profile</h2><p>Hospitality professional with experience in front office operations, guest transport, pool safety and resort service in Greece and Cyprus. Dependable and collaborative, with a positive, solutions-oriented approach, strong communication skills and experience working in demanding environments.</p>
+
 <h2>Professional Experience</h2><div class="cv-job"><h3>Night Shift Receptionist <span> | Apr 2026 — Present</span></h3><p class="cv-employer">Wine Hotel</p><p>Front office operations, guest assistance, night audit responsibilities and overnight guest experience management.</p></div><div class="cv-job"><h3>Groom / Bell Boy (Seasonal) <span> | May 2025 — October 2025</span></h3><p class="cv-employer">Atrium Palace Thalasso Spa Resort &amp; Villas – Rhodes, Greece</p><p>Assisted with luggage, room and villa transfers, mobility support and resort guidance. Supported reception and concierge teams and maintained lobby readiness.</p></div><div class="cv-job"><h3>Cook &amp; Special Forces Trainee <span> | May 2024 — February 2025</span></h3><p class="cv-employer">Hellenic Army – Greece</p><p>Prepared meals for approximately 1,000 troops daily. Maintained hygiene and quality standards, coordinated field kitchen operations and adapted to changing schedules.</p></div><div class="cv-job"><h3>Pool Attendant / Lifeguard (Seasonal) <span> | 2019 — 2023</span></h3><p class="cv-employer">Sunrise Beach Hotel – Protaras, Cyprus</p><p>Supervised pool and beach safety, enforced rules and performed rescues when required. Managed seating, towels and guest service while maintaining clean, ready facilities.</p></div><div class="cv-job"><h3>Electrician Assistant <span> | 2020 — 2022</span></h3><p class="cv-employer">Panels 3Gyian – Central Macedonia, Greece</p><p>Assisted solar farm installation, panel and tool organization, wiring, inverter placement and testing, following worksite safety protocols.</p></div><div class="cv-job"><h3>Waiter (Part-Time) <span> | 2019</span></h3><p class="cv-employer">Ladokolla – Protaras, Cyprus</p><p>Provided table service, handled orders and supported the team during peak hours.</p></div><div class="cv-job"><h3>Delivery / Waiter <span> | 2017</span></h3><p class="cv-employer">Pizza Latino – Mavrothalassa, Greece</p><p>Delivered orders and supported in-house service with attention to accuracy and hygiene.</p></div><div class="cv-job"><h3>Cashier <span> | 2016</span></h3><p class="cv-employer">Carrefour Franchise – Mavrothalassa, Greece</p><p>Handled transactions, assisted customers and maintained checkout records.</p></div></section><section class="cv-page"><h1 class="cv-continuation">Franko Hysenllari</h1><h2>Skills &amp; Languages</h2><p><strong>Hospitality &amp; Guest Service:</strong> Guest Experience; VIP Support; Concierge Collaboration; Luggage Handling; Service Recovery.</p><p><strong>Safety &amp; Lifeguarding:</strong> Emergency Response; Rescue Awareness; Sunbed Flow Management; Guest Safety Guidance.</p><p><strong>Military Discipline &amp; Leadership:</strong> Discipline; Task Execution; Team Coordination; High-Volume Operations.</p><p><strong>Technical &amp; Digital Skills:</strong> HTML; CSS; JavaScript; Arduino &amp; Sensors; Electronics Basics; Microsoft Office.</p><p><strong>Languages:</strong> Albanian — Native; Greek — Native; English — C2; German — A1+; Spanish — A1.</p><p><strong>Soft Skills:</strong> Customer Focus; Adaptability; Emotional Intelligence; Teamwork; Decision-Making; Reliability; Cultural Awareness.</p><h2>Education &amp; Professional Development</h2><p><strong>Education — Computer Science:</strong> JavaScript Asteroids Game Development, MindLuster — Feb 2024; Intro to Web Dev (HTML5, CSS3, JS), edX — Nov 2023 – Jan 2024; HTML, CSS, JavaScript, Coursera — Nov 2023 – Dec 2023.</p><p><strong>Languages:</strong> ECPE English C2 (Michigan) — May 2015 – Dec 2016; Pearson English B2 — Sep 2009 – May 2015; Basic Spanish, edX — Aug 2023 – Dec 2023; German A1, MindLuster — May 2023 – Aug 2023.</p><p><strong>Development &amp; Training:</strong> Introduction to Abnormal Psychology, Coursera — Dec 2025; Introduction to Psychology, Coursera — May 2025; Schizophrenia, Coursera — May 2025; Lifeguard Certificate (Pool) — Apr 2025; Cook, Military (Special Forces) — May 2024 – Feb 2025; Leadership &amp; Teams, Saylor Academy — Oct 2024; Social Psychology, Coursera — Jan 2023 – Mar 2023; Bronze Pool Lifeguard, Life Saving Cyprus — Mar 2022 – May 2022.</p><p><strong>Continuous Growth:</strong> LinkedIn Learning : Programming Foundations, Emotional Intelligence; SkillUp : Intro to Data Analytics, Business Analysis Basics; MindLuster : Communication Skills, Body Language, Emotional Intelligence; Typsy : Guest experience, Front desk, Teamwork, Social media for hospitality.</p><p><strong>Additional training:</strong> Leadership and Teams; Hotel Management: Distribution, Revenue &amp; Demand; Psychological First Aid; Lifeguard Certification; Schizophrenia Awareness.</p><h2>Selected Projects</h2><p><strong>Arduino RC Car:</strong> Built Ethernet-based movement control using an Arduino Uno R3 and ultrasonic obstacle detection, stopping the car within 20 cm of an obstacle.</p><p><strong>Personal Portfolio:</strong> Applied HTML, CSS and JavaScript learning to build a responsive portfolio and develop layout and interface skills.</p><h2>Interests</h2><p>Travel and cultural exchange, fitness, woodworking, DIY projects, psychology and technology.</p><p class="cv-request">Certificates and references available upon request.</p></section></article></body>
+
 </html>
